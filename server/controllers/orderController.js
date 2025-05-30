@@ -171,7 +171,7 @@ export const getUserOrder = async (req, res) => {
     const userId = req.userId; // userId from server's req object
     const orders = await Order.find({
       userId,
-      $or: [{ paymentType: "COD" }, { isPaid: false }],
+      $or: [{ paymentType: "COD" }, { isPaid: true }],
     })
       .populate("items.product address")
       .sort({ createdAt: -1 });
@@ -186,7 +186,7 @@ export const getUserOrder = async (req, res) => {
 export const getAllOrders = async (req, res) => {
   try {
     const orders = await Order.find({
-      $or: [{ paymentType: "COD" }, { isPaid: false }],
+      $or: [{ paymentType: "COD" }, { isPaid: true }],
     })
       .populate("items.product address")
       .sort({ createdAt: -1 });
