@@ -60,7 +60,6 @@ const Cart = () => {
         }
       } else {
         // Place Order with Stripe
-
         const { data } = await axios.post("/api/order/stripe", {
           userId: user._id,
           items: cartArray.map((item) => ({
@@ -69,9 +68,12 @@ const Cart = () => {
           })),
           address: selectedAddress._id,
         });
+        console.log("backed stripe response: ", data);
 
         if (data.success) {
           window.location.replace(data.url);
+          setCartItems({}); // clearing the cart
+          navigate("/my-orders");
         } else {
           toast.error(data.message);
         }

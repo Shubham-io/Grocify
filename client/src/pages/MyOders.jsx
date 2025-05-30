@@ -62,11 +62,11 @@ const MyOders = () => {
                   <h2 className="text-xl font-medium text-gray-800">
                     {item.product.name}
                   </h2>
-                  <p>Category: {item.product.category}</p>
+                  <p className="text-sm">Category: {item.product.category}</p>
                 </div>
               </div>
 
-              <div className="flex flex-col justify-center md:ml-8 mb-2">
+              <div className="flex flex-col justify-center md:ml-13 mb-2">
                 <p>Quantity: {item.quantity || "1"}</p>
                 <p>Status: {order.status}</p>
                 <p>Date: {new Date(order.createdAt).toLocaleDateString()}</p>
