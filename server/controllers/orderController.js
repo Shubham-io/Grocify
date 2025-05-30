@@ -162,7 +162,7 @@ export const stripeWebhooks = async (req, res) => {
       console.error(`Unhandled event type ${event.type}`);
       break;
   }
-  response.json({ received: true });
+  res.json({ received: true });
 };
 
 // Get orders of individual user by User ID : /api/order/user
