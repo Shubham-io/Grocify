@@ -1,12 +1,60 @@
-# React + Vite
+ # 🛒 Grocify - A MERN Stack E-Commerce WebApp  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I have created this full-stack e-commerce web app using the **MERN stack** (MongoDB, Express.js, React, Node.js) with **Stripe** for secure payments. It supports both users and sellers, enabling shopping, product management, order tracking, and more.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
 
-## Expanding the ESLint configuration
+### 👥 User Side
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Login & authentication
+- Browse products & categories
+- View product details
+- Manage cart & checkout with Stripe
+- Track orders (`MyOrders`)
+- Manage delivery addresses
+
+### 🧑‍🏭 Seller Side
+
+- Seller login & auth
+- Add/manage products (`AllProducts`)
+- Manage product inventory
+- View user's order details
+
+---
+
+## 🔧 Backend Highlights
+
+- Role-based auth for users/sellers
+- CRUD APIs for users, products, orders and addresses
+- Mongoose models for all resources
+- Organized routes & modular controllers
+
+---
+
+## 💳 Payments
+
+- **Stripe** integrated for secure and reliable checkout
+
+---
+
+## 🧪 Tech Stack
+
+- **Frontend**: React, Vite, Context API  
+- **Backend**: Node.js, Express, MongoDB, Mongoose, JWT Token 
+- **Payments**: Stripe  
+- **Deployments**: Vercel (frontend & backend)
+
+---
+
+## You're welcome to:
+
+- ⭐ Star the repository if you find it useful
+- 🐛 Open an issue for bugs or suggestions
+- 🔧 Submit a pull request to improve the code
+- 💬 Share feedback or ideas to make it better
+
+Your support and contributions are greatly appreciated!  
+Let's collaborate and make this project even more awesome !!
+
