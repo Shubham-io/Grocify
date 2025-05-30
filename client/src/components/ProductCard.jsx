@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import { assets } from "../assets/assets";
-import { Currency } from "lucide-react";
 import { useAppContext } from "../context/AppContext";
 
 const ProductCard = ({ product }) => {
