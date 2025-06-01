@@ -17,3 +17,20 @@
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
+
+/* Payment success classes */
+@keyframes breathing {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+.breathing {
+  animation: breathing 1.8s ease-in-out infinite;
+}
