@@ -20,6 +20,7 @@ import Order from "./pages/seller/Orders";
 import Loading from "./components/Loading";
 
 const App = () => {
+  // finding seller keyword in url
   const isSellerPath = useLocation().pathname.includes("seller");
   const { showUserLogin, isSeller } = useAppContext();
 
@@ -57,6 +58,7 @@ const App = () => {
             path="/seller"
             element={isSeller ? <SellerLayout /> : <SellerLogin />}
           >
+            // default seller route with index keyword 
             <Route index element={isSeller ? <AddProduct /> : null} />
             <Route path="product-list" element={<ProductList />} />
             <Route path="orders" element={<Order />} />
