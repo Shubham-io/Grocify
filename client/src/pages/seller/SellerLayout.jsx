@@ -3,8 +3,8 @@ import { assets } from "../../assets/assets";
 import { useAppContext } from "../../context/AppContext";
 import { toast } from "react-toastify";
 
-const SellerLayout = () => {
-  const {axios, navigate } = useAppContext();
+const SellerLayout = () => {  
+  const {axios, navigate} = useAppContext();
 
   const sidebarLinks = [
     { name: "Add Product", path: "/seller", icon: assets.add_icon },
