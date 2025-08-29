@@ -19,7 +19,6 @@ export const AppContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
   const [searchQuery, setSearchQuery] = useState({});
 
-
   // Fetch seller status
   const fetchSeller = async () => {
     try {
@@ -63,6 +62,9 @@ export const AppContextProvider = ({ children }) => {
 
   // add product to cart
   const addToCart = (itemId) => {
+    if (!user) {
+      return toast.error("Please login to add items to cart");
+    }
     let cartData = structuredClone(cartItems);
     if (cartData[itemId]) {
       cartData[itemId] += 1;
@@ -127,7 +129,6 @@ export const AppContextProvider = ({ children }) => {
     const updateCart = async () => {
       try {
         const { data } = await axios.post("/api/cart/update", { cartItems });
-        console.log("card data api response :", data);
 
         if (!data.success) {
           toast.error(data.message);

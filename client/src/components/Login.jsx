@@ -8,7 +8,7 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const { setShowUserLogin, setUser, axios, navigate } = useAppContext();
+  const { setShowUserLogin, user, setUser, axios, navigate } = useAppContext();
 
   const onSubmitHandler = async (event) => {
     try {
@@ -21,7 +21,7 @@ const Login = () => {
       if (data.success) {
         navigate("/");
         setUser(data.user);
-        toast.success(data.message)
+        toast.success(data.message);
         setShowUserLogin(false); // hiding login form
       } else {
         toast.error(data.message);

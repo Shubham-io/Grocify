@@ -24,7 +24,11 @@ const Orders = () => {
     fetchOrders();
   }, []);
 
-  return (
+  return orders.length === 0 ? (
+    <h2 className="w-full md:text-3xl text-lg font-medium text-center mt-8">
+      No orders found
+    </h2>
+  ) : (
     <div className="no-scrollbar flex-1 h-[95vh] overflow-y-scroll">
       <div className="md:p-10 p-4 space-y-4">
         <h2 className="text-lg font-medium">Orders List</h2>
