@@ -4,7 +4,7 @@ import { useAppContext } from "../../context/AppContext";
 import { toast } from "react-toastify";
 
 const Orders = () => {
-  const { currency, axios } = useAppContext();
+  const { Currency, axios } = useAppContext();
   const [orders, setOrders] = useState([]);
 
   const fetchOrders = async () => {
@@ -43,7 +43,7 @@ const Orders = () => {
                 {order.items.map((item, index) => (
                   <div key={index} className="flex flex-col">
                     <p className="font-medium">
-                      {item.product.name}{" "}
+                      {item.product?.name || "Unknown Product"}
                       <span className="text-primary">x {item.quantity}</span>
                     </p>
                   </div>
@@ -67,7 +67,7 @@ const Orders = () => {
             </div>
 
             <p className="font-medium text-lg my-auto">
-              {currency}
+              {Currency}
               {order.amount}
             </p>
 
